@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td ,textarea ,input { margin: 0; padding: 0; border: 0; font-size: 100%;}
+body { margin:0 auto; text-align:center; font-family: Arial,Tahoma, Helvetica, sans-serif; font-size:12px; cursor:default; white-space:wrap;}
+img { border:none;}
+li { list-style-type:none;}
+a { text-decoration:none; font-family:Arial; cursor:pointer;}
+.clear { clear:both;}
+body{ background:#68a800; position:relative;}
+*html{background-image:url(about:blank);background-attachment:fixed;} 
+
+#header .header_top,#header .header_rTex .t_line,#header .header_rTex .b_line,#footer .line{ background:url(../images/layout_final_bg.png) no-repeat;}
+
+
+/*----------header-&&footer---------*/
+#header{ width:780px; overflow:hidden; margin:0 auto; text-align:left; background:url(../images/layout_final_line.png) repeat-y; }
+#header .header_top{hidden;height:60px; overflow:hidden;}
+#header .telp{ position:absolute; width:100px; overflow:hidden; margin-left:790px; margin-top:-10px;}
+#header .telp .lange{ text-align:right;}
+#header .telp .lange a{  color:#fff; }
+#header .telp p{ padding-top:32px;font-size:14px;font-weight:bold;}
+#header .telp p span{ font-family:Arial; color:#390; font-size:16px; letter-spacing:1px;}
+#header .logo{ float:left; padding-left:22px; width:352px; height:106px; overflow:hidden;}
+#header .header_rTex{ float:left; padding-left:14px; width:572px; overflow:hidden; padding-top:34px;}
+#header .header_rTex .t_line{ height:5px; overflow:hidden; background-position:0 -94px;}
+#header .header_rTex .b_line{ height:5px; overflow:hidden;background-position:0 -100px;}
+#header .header_rTex .box{ width:560px; overflow:hidden; background:#f0f0f0; height:50px;padding-left:12px;}
+#header .header_rTex .box ul li{ height:22px; line-height:22px; overflow:hidden; padding-top:3px; width:550px;}
+#header .header_rTex .box ul li a{ color:#fe0201;}
+#header .benner{ width:923px; height:250px; overflow:hidden; margin:10px auto 0; border:9px solid #f0f0f0;}
+#header .menu{ width:941px; margin:20px auto 0; height:27px; border-bottom:1px solid #333;}
+#header .menu .m-b{ width:941px; height:27px; }
+#header .menu ul li{width:169px; height:27px;}
+#header .menu ul li a{ background:url(../images/menu_bg.png) no-repeat;}
+#header .menu ul li a{ display:block; width:169px; height:27px; overflow:hidden;}
+#header .menu ul .one1{ z-index:1;  position: absolute;}
+#header .menu ul .one2{ z-index:2;margin-left:156px; position:absolute;}
+#header .menu ul .one3{ z-index:3;margin-left:311px; position:absolute;}
+#header .menu ul .one4{ z-index:4;margin-left:464px; position:absolute;}
+#header .menu ul .one5{ z-index:5;margin-left:618px; position:absolute;}
+#header .menu ul .one6{ z-index:6;margin-left:772px; position:absolute;}
+#header .menu ul .one1 a{background-position:0 -35px;}
+#header .menu ul .one2 a{background-position:-171px -35px;}
+#header .menu ul .one3 a{background-position:-342px -35px;}
+#header .menu ul .one4 a{background-position:-513px -35px;}
+#header .menu ul .one5 a{background-position:-684px -35px;}
+#header .menu ul .one6 a{background-position:-855px -35px;}
+#header .menu ul .one1 a:hover,#header .menu ul .one1 a.cur{background-position:0 0;}
+#header .menu ul .one2 a:hover,#header .menu ul .one2 a.cur{background-position:-171px 0;}
+#header .menu ul .one3 a:hover,#header .menu ul .one3 a.cur{background-position:-342px 0;}
+#header .menu ul .one4 a:hover,#header .menu ul .one4 a.cur{background-position:-513px 0;}
+#header .menu ul .one5 a:hover,#header .menu ul .one5 a.cur{background-position:-684px 0;}
+#header .menu ul .one6 a:hover,#header .menu ul .one6 a.cur{background-position:-855px 0;}
+
+#main_nav li ul{ background: #6baa03; border:1px solid #578c00; border-top:0; top:27px;left:0px; width:152px; overflow:hidden;position: absolute; z-index:99;}
+#main_nav li ul li a{background:#80bb16!important; height:22px!important; padding-left:42px; line-height:22px!important; color:#416900;}
+#main_nav li ul li{ height:23px!important; overflow:hidden;}
+#main_nav li ul li a:hover{ background:#68a800!important; color:#fff;}
+#header .menu ul .one6 ul{width:167px; }
+
+#footer{width:987px; overflow:hidden; margin:0 auto; padding-bottom:68px;}
+#footer .footer_w_bg{ width:987px; overflow:hidden; background:url(../images/layout_final_line.png) repeat-y; }
+#footer .linkVi{ width:941px; overflow:hidden; margin:0 auto; background:url(../images/layout_final_line.gif)  repeat-x; padding:8px 0; height:72px;}
+#footer .linkVi ul li{ float:left; display:inline; width:92px; overflow:hidden; height:72px; margin-right:7px;}
+#footer .linkVi ul .w{ width:114px;}
+#footer .line{ width:987px; height:20px; overflow:hidden; background-position:0 -73px; margin:0 auto;}
+#footer .foot_bottom{ width:987px; overflow:hidden; margin:0 auto;}
+#footer .foot_bottom span{ float:left; text-align:left; color:#fff;}
+#footer .foot_bottom em{ float:right; text-align:left; font-style:normal; padding-right:10px;color:#fff;}
+#footer .foot_bottom span a{ color:#f79729;}
+
+/*----------end header-$$footer---------*/
+#turn_top{ position:fixed;_position:absolute;width:39px; height:48px; overflow:hidden; display:block; z-index:9999;*position:absolute;*top:expression((document.compatMode?documentElement.scrollTop:document.body.scrollTop) + (document.compatMode?documentElement.offsetHeight:document.body.offsetHeight) -48 + 'px');}

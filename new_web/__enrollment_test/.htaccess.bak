@@ -1,0 +1,28 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName www.meghongkong.com/meg/
+
+order deny,allow
+deny from all
+allow from 219.79.226.190
+allow from 101.78.242.15
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|js|css|swf|img|robots\.txt|ckeditor|ckfinder|font-awesome|captcha)
+RewriteRule ^(.*)$ /index.php/$1 [L]

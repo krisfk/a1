@@ -1,0 +1,4 @@
+Disallow: /a1_dev/*
+Disallow: /old_website/*
+Disallow: /enquiry-form/list/*
+Disallow: /registration_test/*

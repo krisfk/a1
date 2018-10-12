@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+
+<body style="font-family:Arial;">
+
+<table border=0 cellpadding=3 cellspacing=0 width="95%">
+  <tr>
+    <td align="center" style="font-weight:bold;">Introduction</td>
+  </tr>
+  <tr>
+    <td>
+      <p>The purpose of this program is to help candidates familiarize with the format and operation of the Computerized Written Test of driving Test.</p>
+      <p>In the actual test, candidates can only use touch screen devices to give answers.  Candidates can practise touch screen features by using the Kiosks located at our 3 Schools located at Shatin, Hong Kong Island and Yuen Long.</p>
+      <!-- Begin: 20080411 - Reb -->
+      <!-- <p>There are 14 groups of questions in the Trial Test, each group contains 20 questions.  The questions in the Trial Test are for reference only and may not be applied to real world situation.  However, in the actual test, candidates will receive their result slips at the respective Appointment Offices in about 15 minutes after they complete the tests.</p> -->      
+      <!-- End: 20080411 - Reb -->
+      <p>In the Trial Test, each group contains 20 questions.  The questions in the Trial Test are for reference only and may not be applied to real world situation.  However, in the actual test, candidates will receive their result slips at the respective Appointment Offices in about 15 minutes after they complete the tests.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" style="font-weight:bold;">Please read the following guidelines carefully</td>
+  <tr>
+  <tr>
+    <td>
+      <ol>
+        <li>You are required to input the Test Form number.</li>        
+        <!-- Begin: 20080411 - Reb -->
+        <!-- <li>There are 14 groups of questions in this test, each group contains 20 questions. All questions carry equal marks.</li> -->        
+        <!-- End: 20080411 - Reb -->
+        <li>Each Trial Test contains 20 questions. All questions carry equal marks.</li>
+        <li>Choose you answer by pressing the corresponding box.  You may change your answer simply by pressing a new box. It will automatically replace you previous choice.  You can confirm your answer by pressing the NEXT QUESTION button at the bottom of the screen.</li>
+        <li>You may end the examination by pressing the SUBMIT/TEST SUMMARY button at the bottom of the screen. After pressing this button, the Test Summary showing the number of answered/unanswered questions will appear with the Review Box. You can press CONFIRM END to end the test or press BACK TO START to return to the test.</li>
+      </ol>
+    </td>
+  </tr>
+</body>
+
+</html>

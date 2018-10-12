@@ -1,0 +1,218 @@
+/* CSS Document */
+
+/* Reset CSS */
+*{margin:0;padding:0}html{height:100%;min-width:375px;}body{line-height:1}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}address,caption,cite,code,dfn,em,strong,h,var{font-style:normal;font-weight:normal}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}caption,th{text-align:left}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}ol,ul{list-style:none}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{text-decoration: none; margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}img{border:0}
+
+
+.eng{
+	
+	    font-family: 'Exo 2';
+    font-size: 46px;
+    font-weight: bold;
+    color: #012c6a;
+    transform: skew(-9deg);
+    -webkit-transform: skew(-9deg);
+    display: inline-block;
+	
+}
+
+.chi{
+	    font-size: 18px;
+    color: #4b76b4;
+    font-weight: bold;
+    margin: 0 0 0 8px;
+    transform: skew(-9deg);
+    -webkit-transform: skew(-9deg);
+    display: inline-block;
+}
+.logo-div{
+	text-align: center;
+	margin: 20px auto 20px auto;
+}
+.a1-logo{
+	    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+body{
+	
+	font-family: "微軟正黑體", "arial";
+    background: url(../images/bg.png) 0px -260px;
+	
+
+}
+
+.map-iframe-loading{
+	height: 300px;width: 100%;text-align: center;line-height: 300px;font-size: 30px;color: #333;
+	display: none;
+}
+.shop-menu ul 
+{
+	    display: table-cell;
+    margin: 10px 0 0 0;
+    height: 41px;
+    vertical-align: middle;
+	padding: 20px 0 0 0 ;
+}
+.shop-menu ul li{
+	display: inline-block;
+/*	border-right:1px #a0a0a0 solid;
+*/}
+
+.shop-menu ul li.last{
+	border: none;
+}
+
+
+.shop-title.meg{
+	background: #333333; color: #fff;
+}
+
+
+.shop-title.hksm{
+	background: #ef8f2e; color: #fff;
+}
+
+
+.shop-title.a1{
+	background: #012c6a; color: #fff;
+}
+
+.shop-title{
+	
+	
+	    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    width: 98%;
+    border-radius: 0px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    padding: 0 0 0 10px;
+	margin: 0 0 20px 0;
+	
+}
+
+.shop-menu{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.header{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 54px;
+	background: #000;
+	color: #fff;
+	
+}
+
+.logo{
+	float: left;
+}
+
+.header .header-inner .middle{
+		width: 100%;
+	display: table-cell;
+	margin: 0 auto;
+	vertical-align: middle;
+	height: 54px;
+	
+}
+
+
+.header .header-inner {
+			width: 93%;
+		margin: 0 auto;
+}
+
+
+.shop-menu ul li a{
+	    padding: 5px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    color: #012c6a;
+    border: 4px solid #012c6a;
+	
+}
+
+
+.shop-menu ul li a.active
+{
+	    background: #012c6a;
+    color: #fff;
+	
+}
+
+.shop-menu.meg{
+}
+
+.shop-menu.hksm{
+}
+
+.shop-menu.a1{
+}
+
+.map-iframe{
+	
+}
+
+.middle{
+	
+	    width: 95%;
+    display: block;
+    margin: 10px auto;
+    max-width: 500px;
+}
+
+.map-iframe iframe{
+	width: 100%;
+	height: 300px;
+}
+
+
+
+
+
+.address{
+	display: block;
+    margin: 20px 0 20px 0;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+#logo{
+	position: relative;
+	z-index: 100;
+}
+
+.page-title{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 58px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#gmap_canvas{
+	height:300px;width:100%;
+	
+}
+#gmap_canvas img {
+				max-width: none!important;
+				background: none!important
+			}
+
+.gm-style-iw div{
+	overflow: hidden;
+}
+
+.map-img{
+	width: 100%;height: auto;
+}

@@ -1,0 +1,57 @@
+2004.04.28 09:35 B c:\onlinetest\check.php <-- hksm /var/www/html/onlinetest check.php
+2004.04.28 09:35 B c:\onlinetest\footer.php <-- hksm /var/www/html/onlinetest footer.php
+2004.04.28 09:35 B c:\onlinetest\header.php <-- hksm /var/www/html/onlinetest header.php
+2004.04.28 09:35 B c:\onlinetest\index.php <-- hksm /var/www/html/onlinetest index.php
+2004.04.28 09:35 B c:\onlinetest\index_en.html <-- hksm /var/www/html/onlinetest index_en.html
+2004.04.28 09:35 B c:\onlinetest\index_zh.html <-- hksm /var/www/html/onlinetest index_zh.html
+2004.04.28 09:35 B c:\onlinetest\introduction_en.html <-- hksm /var/www/html/onlinetest introduction_en.html
+2004.04.28 09:35 B c:\onlinetest\introduction_zh.html <-- hksm /var/www/html/onlinetest introduction_zh.html
+2004.04.28 09:35 B c:\onlinetest\login.php <-- hksm /var/www/html/onlinetest login.php
+2004.04.28 09:35 B c:\onlinetest\modules.php <-- hksm /var/www/html/onlinetest modules.php
+2004.04.28 09:35 B c:\onlinetest\procedures.php <-- hksm /var/www/html/onlinetest procedures.php
+2004.04.28 09:35 B c:\onlinetest\result.php <-- hksm /var/www/html/onlinetest result.php
+2004.04.28 09:35 B c:\onlinetest\stylesheet.css <-- hksm /var/www/html/onlinetest stylesheet.css
+2004.04.28 09:35 B c:\onlinetest\summary.php <-- hksm /var/www/html/onlinetest summary.php
+2004.04.28 09:35 B c:\onlinetest\test.php <-- hksm /var/www/html/onlinetest test.php
+2004.04.28 09:39 B c:\onlinetest\check.php --> www.hksm.com.hk /var/www/html/onlinetest2 check.php
+2004.04.28 09:39 B c:\onlinetest\footer.php --> www.hksm.com.hk /var/www/html/onlinetest2 footer.php
+2004.04.28 09:39 B c:\onlinetest\header.php --> www.hksm.com.hk /var/www/html/onlinetest2 header.php
+2004.04.28 09:39 B c:\onlinetest\index.php --> www.hksm.com.hk /var/www/html/onlinetest2 index.php
+2004.04.28 09:39 B c:\onlinetest\index_en.html --> www.hksm.com.hk /var/www/html/onlinetest2 index_en.html
+2004.04.28 09:39 B c:\onlinetest\index_zh.html --> www.hksm.com.hk /var/www/html/onlinetest2 index_zh.html
+2004.04.28 09:39 B c:\onlinetest\introduction_en.html --> www.hksm.com.hk /var/www/html/onlinetest2 introduction_en.html
+2004.04.28 09:39 B c:\onlinetest\introduction_zh.html --> www.hksm.com.hk /var/www/html/onlinetest2 introduction_zh.html
+2004.04.28 09:39 B c:\onlinetest\login.php --> www.hksm.com.hk /var/www/html/onlinetest2 login.php
+2004.04.28 09:39 B c:\onlinetest\modules.php --> www.hksm.com.hk /var/www/html/onlinetest2 modules.php
+2004.04.28 09:39 B c:\onlinetest\procedures.php --> www.hksm.com.hk /var/www/html/onlinetest2 procedures.php
+2004.04.28 09:39 B c:\onlinetest\result.php --> www.hksm.com.hk /var/www/html/onlinetest2 result.php
+2004.04.28 09:39 B c:\onlinetest\stylesheet.css --> www.hksm.com.hk /var/www/html/onlinetest2 stylesheet.css
+2004.04.28 09:39 B c:\onlinetest\summary.php --> www.hksm.com.hk /var/www/html/onlinetest2 summary.php
+2004.04.28 09:39 B c:\onlinetest\test.php --> www.hksm.com.hk /var/www/html/onlinetest2 test.php
+105.12.23 10:31 B c:\windows\desktop\website\onlinetest\WS_FTP.LOG <-- www.hksm.com.hk /var/www/html/onlinetest WS_FTP.LOG
+2006.04.08 11:09 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\WS_FTP.LOG <-- redhat /onlinetest WS_FTP.LOG
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\check.php --> 202.65.194.3 /var/www/html/21185595/onlinetest check.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\footer.php --> 202.65.194.3 /var/www/html/21185595/onlinetest footer.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\header.php --> 202.65.194.3 /var/www/html/21185595/onlinetest header.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\index.html --> 202.65.194.3 /var/www/html/21185595/onlinetest index.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\index.php --> 202.65.194.3 /var/www/html/21185595/onlinetest index.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\index_en.html --> 202.65.194.3 /var/www/html/21185595/onlinetest index_en.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\index_zh.html --> 202.65.194.3 /var/www/html/21185595/onlinetest index_zh.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\introduction_en.html --> 202.65.194.3 /var/www/html/21185595/onlinetest introduction_en.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\introduction_zh.html --> 202.65.194.3 /var/www/html/21185595/onlinetest introduction_zh.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\login.php --> 202.65.194.3 /var/www/html/21185595/onlinetest login.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\modules.php --> 202.65.194.3 /var/www/html/21185595/onlinetest modules.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\procedures.php --> 202.65.194.3 /var/www/html/21185595/onlinetest procedures.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\result.php --> 202.65.194.3 /var/www/html/21185595/onlinetest result.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\stylesheet.css --> 202.65.194.3 /var/www/html/21185595/onlinetest stylesheet.css
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\summary.php --> 202.65.194.3 /var/www/html/21185595/onlinetest summary.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\test.html --> 202.65.194.3 /var/www/html/21185595/onlinetest test.html
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\test.php --> 202.65.194.3 /var/www/html/21185595/onlinetest test.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\test_en.php --> 202.65.194.3 /var/www/html/21185595/onlinetest test_en.php
+2006.04.10 11:07 B C:\Documents and Settings\Patrick\桌面\newweb.bu.20060408\onlinetest\test_zh.php --> 202.65.194.3 /var/www/html/21185595/onlinetest test_zh.php
+2007.02.07 20:07 B Z:\onlinetest\WS_FTP.LOG <-- DYX HKSM WEB /var/www/html/onlinetest WS_FTP.LOG
+2007.07.18 10:45 B C:\_website_testing_dev\onlinetest\test_en.php --> www.hksm.com.hk /var/www/html/onlinetest test_en.php
+2007.07.18 10:45 B C:\_website_testing_dev\onlinetest\test_zh.php --> www.hksm.com.hk /var/www/html/onlinetest test_zh.php
+2007.07.18 11:00 B C:\_website_testing_dev\onlinetest\test_en.php --> www.hksm.com.hk /var/www/html/testing_dev/onlinetest test_en.php
+2007.07.18 11:00 B C:\_website_testing_dev\onlinetest\test_zh.php --> www.hksm.com.hk /var/www/html/testing_dev/onlinetest test_zh.php
+2007.07.18 11:02 B C:\_website_testing_dev\onlinetest\modules.php --> www.hksm.com.hk /var/www/html/testing_dev/onlinetest modules.php

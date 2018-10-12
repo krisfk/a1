@@ -1,0 +1,1 @@
+$("td").each(function(){var a=$(this);a.html(a.html().replace(/&nbsp;/g,""))});

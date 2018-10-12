@@ -1,0 +1,2 @@
+[03-Jan-2018 20:29:19 America/Chicago] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/a1driving/public_html/a1_dev/enquiry-form/list/login.php on line 12
+[03-Jan-2018 20:46:31 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/a1driving/public_html/a1_dev/enquiry-form/list/get.php on line 77

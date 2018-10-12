@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+/*----------main----------*/
+#main{ width:987px; overflow:hidden; margin:0 auto; background:url(../images/layout_final_line.png) repeat-y; text-align:left; padding-top:10px;}
+#main .war{ width:941px; overflow:hidden; margin:0 auto; padding-bottom:10px;}
+#main .war ul{ width:942px; overflow:hidden;}
+#main .war ul li{ float:left; display:inline; width:314px; overflow:hidden;}
+#main .war ul li h2{ font-size:16px; font-family:"微软雅黑"; padding-top:18px; width:100%; overflow:hidden;}
+#main .war ul li h2 img{ float:left; vertical-align:middle;}
+#main .war ul li h2 em{ display:block; float:left; font-style:normal; padding-top:11px; padding-left:10px; color:#666;}
+#main .war ul li h2 span{ color:#66a600;}
+
+#main .war ul li .video{ width:200px; height:160px; overflow:hidden; border:1px solid #b1b1b1; margin-top:10px;}
+#main .war ul li .tit{ line-height:20px; padding-top:10px;}
+#main .war ul li .tit a{ color:#090;}
+#main .war ul .midel{ width:400px;}
+#main .war ul .midel .techList{ width:400px; overflow:hidden;}
+#main .war ul .voting{ width:225px;}
+#main .war ul li .techList .item{ width:100%; overflow:hidden; padding:10px 0;}
+#main .war ul li .techList .item .pic{ float:left; width:70px; height:70px; overflow:hidden; padding:4px; border:1px solid #ccc;}
+#main .war ul li .techList .item .title{ float:left; padding-left:10px; width:220px; overflow:hidden; height:22px; line-height:22px;}
+#main .war ul li .techList .item .title a{ font-weight:bold;}
+#main .war ul li .techList .item .text{ float:left; padding-left:10px; width:220px; overflow:hidden; height:44px; line-height:22px; overflow:hidden;}
+#main .war ul li .getMessg{ width:223px; overflow:hidden; margin-top:10px; border:1px solid #f0f0f0;}
+#main .war ul li .getMessg dl{ width:208px; overflow:hidden; padding-left:10px; padding-top:8px;}
+#main .war ul li .getMessg dl dt{ height:26px; line-height:22px; color:#666; font-weight:bold;}
+#main .war ul li .getMessg dl dd{ height:24px; overflow:hidden; padding-top:2px;}
+#main .war ul li .getMessg dl dd input{ vertical-align:middle;}
+#main .war ul li .getMessg .ture{ height:18px; overflow:hidden; padding:5px 0 22px 10px;}
+#main .war ul li .getMessg .ture a{ background:url(../images/layout_final_btn.gif) no-repeat; display:block; width:45px; height:18px; line-height:18px; overflow:hidden; color:#fff; text-align:center;}
+
+/*------end ----main----------*/
+
+
+
+/*----------inner----------*/
+#detail_bg{width:987px; overflow:hidden; margin:0 auto; background:url(../images/layout_final_line.png) repeat-y; text-align:left; padding:10px 0 20px;}
+#detail{ width:941px; overflow:hidden; margin:0 auto; }
+#detail .lBox{ float:left; width:695px; overflow:hidden; border-right:1px solid #e8e8e8;}
+#detail .lBox .poiston{ width:100%; overflow:hidden; height:22px; line-height:22px; color:#6763767;}
+#detail .lBox .poiston a{ color:#78aa15;}
+#detail .lBox h4{ height:25px; overflow:hidden; padding-top:18px; font-size:16px; font-weight:bold; font-family:"微软雅黑"; color:#78aa15;}
+#detail .lBox h4 img{ vertical-align:middle;}
+#detail .lBox .de_show_box{ width:100%; overflow:hidden; padding-top:14px;}
+#detail .lBox .de_show_box .map{ width:100%; overflow:hidden;}
+#detail .lBox .de_show_box .info{ width:100%; overflow:hidden; padding:38px 0;}
+#detail .lBox .de_show_box .info p{ text-align:center; padding-top:48px;}
+#detail .lBox .de_show_box .fixBox{ width:100%; overflow:hidden; padding-top:8px;}
+#detail .lBox .de_show_box .fixBox label{ float:left; width:315px; overflow:hidden; text-align:right; padding-right:5px; line-height:18px; color:#ca0006;}
+#detail .lBox .de_show_box .fixBox .put{ float:left;}
+#detail .lBox .de_show_box .fixBox .put select{ width:120px;}
+#detail .rBox{ float:left; width:223px; padding-left:22px; overflow:hidden;}
+#detail .rBox h2{ font-size:16px; font-family:"微软雅黑"; padding-top:18px; width:100%; overflow:hidden;}
+#detail .rBox h2 img{ float:left; vertical-align:middle;}
+#detail .rBox h2 em{ display:block; float:left; font-style:normal; padding-top:11px; padding-left:10px; color:#666;}
+#detail .rBox h2 span{ color:#66a600;}
+
+
+#detail .lBox .de_show_box .about{width:100%; overflow:hidden; padding:0 0 170px; text-indent:24px;}
+#detail .lBox .de_show_box .about p{ line-height:22px; margin-top:12px;}
+#detail .lBox .de_show_box .about p span{ color:#f60;}
+
+#detail .rBox .video_box{ width:223px; overflow:hidden; }
+#detail .rBox .video_box .video{ width:200px; height:160px;border:1px solid #b1b1b1;  overflow:hidden;margin-top:10px;}
+#detail .rBox .video_box .tit{ line-height:20px; padding-top:10px;}
+#detail .rBox .video_box .tit a{ color:#090;}
+#detail .rBox .getMessg_box{ width:223px; overflow:hidden; margin-top:10px;}
+#detail .rBox .getMessg_box .getMessg{ width:221px; overflow:hidden; margin-top:10px; border:1px solid #f0f0f0;}
+#detail .rBox .getMessg_box .getMessg dl{ width:208px; overflow:hidden; padding-left:10px; padding-top:11px;}
+#detail .rBox .getMessg_box .getMessg dl dt{ height:26px; line-height:22px; color:#666; font-weight:bold;}
+#detail .rBox .getMessg_box .getMessg dl dd{ height:24px; overflow:hidden; padding-top:2px;}
+#detail .rBox .getMessg_box .getMessg dl dd input{ vertical-align:middle;}
+#detail .rBox .getMessg_box .getMessg .ture{ height:18px; overflow:hidden; padding:5px 0 30px 10px;}
+#detail .rBox .getMessg_box .getMessg .ture a{ background:url(../images/layout_final_btn.gif) no-repeat; display:block; width:45px; height:18px; line-height:18px; overflow:hidden; color:#fff; text-align:center;}
+
+#detail .rBox .video_box .techList .item{ width:100%; overflow:hidden; padding:10px 0;}
+#detail .rBox .video_box .techList .item .pic{ float:left; width:70px; height:70px; overflow:hidden; padding:4px; border:1px solid #ccc;}
+#detail .rBox .video_box .techList .item .title{ float:left; padding-left:10px; width:130px; overflow:hidden; height:22px; line-height:22px;}
+#detail .rBox .video_box .techList .item .title a{ font-weight:bold;}
+#detail .rBox .video_box .techList .item .text{ float:left; padding-left:10px; width:130px; overflow:hidden; height:44px; line-height:22px; overflow:hidden;}
+
+/*--------end--inner----------*/
+
+
+
+
+/*----------inner2----------*/
+#detail .lBox .detail_teach{width:695px; overflow:hidden;}
+#detail .lBox .detail_teach .t_produ{ width:695px; overflow:hidden; padding-top:15px;}
+#detail .lBox .detail_teach .t_produ .text{ float:left; width:395px; overflow: hidden; margin-right:10px;}
+#detail .lBox .detail_teach .t_produ .text p{ line-height:22px; text-indent:26px;}
+#detail .lBox .detail_teach .t_produ .pic{ float: left; background:url(../images/detai_showpic_bg.gif) no-repeat; width:248px; height:178px; padding-left:14px;}
+#detail .lBox .detail_teach .b_otherShow{ width:632px; overflow:hidden; background:#ffffe1; border:1px solid #eeedac; margin-top:10px; padding:0px 15px 20px;}
+#detail .lBox .detail_teach .b_otherShow h1{ height:30px; line-height:30px; overflow:hidden; color:#6ba803; font-size:16px; padding-top:22px;}
+#detail .lBox .detail_teach .b_otherShow h1 i{ font-style:normal; font-size:12px; letter-spacing:-2px;}
+#detail .lBox .detail_teach .b_otherShow p{ width:630px; overflow:hidden; line-height:22px; padding-top:2px; color:#050200;}
+
+/*----------end -inner2----------*/
+
+
+#detail .lBox .video_list{ width:690px; overflow:hidden;}
+#detail .lBox .video_list ul{ padding-left:45px;}
+#detail .lBox .video_list ul li{ float:left; display:inline; width:230px; overflow:hidden; margin-right:58px; padding-top:28px;}
+#detail .lBox .video_list ul li .pic{ width:228px; overflow:hidden; border:1px solid #e7e7e7;}
+#detail .lBox .video_list ul li .title{ height:40px; line-height:20px; overflow:hidden; padding-top:8px; font-size:14px; color:#666; background:url(../images/vide0_bg01.gif) no-repeat;}
+#detail .lBox .video_list ul li .title a{ color:#999;}
+#detail .lBox .video_list ul li .title a:hover{ color:#000;}
+#detail .lBox .play{ width:690px; overflow:hidden;}
+#detail .lBox .play .paly-video{ width:600px; height:400px; overflow:hidden; margin:20px auto 0; background:#000; color:#fff;}
+#detail .lBox .play .title{ width:690px; overflow:hidden; line-height:22px; font-size:14px; text-align:center; padding-top:22px;}
+
+#detail .lBox .nkown{ width:680px; overflow:hidden;}
+#detail .lBox .nkown h2{ width:680px;overflow:hidden; line-height:22px; font-size:14px; font-weight:bold; border-bottom:3px solid #ffc000; margin-top:12px; color:#a07800;}
+#detail .lBox .nkown h1{ width:670px;overflow:hidden;  line-height:22px; font-size:12px; color:#666; font-weight:bold; padding-left:10px; padding-top:11px;}
+#detail .lBox .nkown p{ width:670px; overflow:hidden; line-height:22px; margin-top:8px; color:#666; background:#fffcea; padding:5px 10px; border-bottom:1px dashed #edead9;}
+
+#detail .lBox .contact{ width:680px; overflow:hidden;}
+#detail .lBox .contact h2{ height:30px; line-height:30px; overflow:hidden; font-size:14px; background:#f2eddd; padding-left:15px; margin-top:15px;}
+#detail .lBox .contact h1{ height:26px; line-height:26px; overflow:hidden; padding-left:15px;}
+#detail .lBox .contact p{ padding-top:8px; padding-left:30px; width:650px; overflow:hidden;}
+#detail .lBox .contact p img{ float:right; vertical-align:middle}
+
+
+
+#detail .lBox .join{ width:680px; overflow:hidden; padding-bottom:38px;}
+#detail .lBox .join .fixBox{ width:680px; overflow:hidden; margin-top:18px;}
+#detail .lBox .join .fixBox label{ float:left; width:100px; overflow:hidden; text-align:right; line-height:20px;}
+#detail .lBox .join .fixBox .put{ float:left; width:120px; overflow:hidden;}
+#detail .lBox .join .fixBox .put input{ border-bottom:1px solid #333; width:100px; vertical-align:middle;}
+#detail .lBox .join .fixBox .put3 .w{ width:220px;}
+#detail .lBox .join .fixBox .tip{ float:left; color:#f60;}
+#detail .lBox .join .fixBox .put2{ float:left;}
+#detail .lBox .join .fixBox .put3{ float:left; height:22px; color:#f60;}
+#detail .lBox .join .fixBox .put2 input{ vertical-align:middle;}
+#detail .lBox .join .fixBox .put3 select{width:130px; vertical-align:middle; font-size:12px; line-height:18px;}
+#detail .lBox .join .fixBox .put3 input{border-bottom:1px solid #333; vertical-align:middle;}
+
+#detail .lBox .join .btn{ height:24px;  overflow:hidden; padding-left:100px; margin-top:25px;}
+#detail .lBox .join .btn a{ display:block;height:24px; width:68px; overflow:hidden; text-align:center; background:#090; line-height:24px; font-size:14px; color:#fff;}
+

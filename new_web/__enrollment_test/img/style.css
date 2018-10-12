@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* base */
+body {
+	margin: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background: url(bg.png) left top repeat;
+    background: #fff;
+}
+body,td,th {
+/*	font-family: "新細明體", Arial;
+*/	
+    
+    	font-family:"微軟正黑體", "arial";
+
+    font-size: 16px;
+/*    line-height: 25px;
+*/	color: #000;
+/*	text-shadow: 2px 2px 4px #d2d2d2;
+*/}
+::-moz-selection { /* Code for Firefox */
+    color: #FFF;
+    background: #000;
+}
+::selection {
+    color: #FFF;
+    background: #000;
+}
+a{
+	outline: none; /* for Firefox Google Chrome  */
+	behavior:expression(this.onFocus=this.blur()); /* for IE */
+}
+a:link {
+	color: #000;
+	/*font-weight: bolder;*/
+	text-decoration: none;
+}
+a:visited {
+	color: #000;
+	/*font-weight: bolder;*/
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+	/*font-weight: bolder;*/
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+hr {
+	height: 1px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background: #dcdcdc;
+	border: none;
+}
+
+.ibgt {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 1px 0px #000;
+    padding: 0 0 0 5px;
+}
+.it {
+/*	padding-left: 11px;
+*/}
+.form_txt {
+	padding: 8px 4px 8px 8px;
+}
+.txt01 {
+	color: #666;
+	line-height: 26px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+/* textbox */
+.textbox {
+/*	height: 26px;
+*/	
+    height: 20px;
+    margin: 8px 8px 8px 0;
+	background: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+	padding: 8px;
+    border-radius: 6px;
+}
+select{
+        height: 36px;
+    padding: 0 0 0 5px;
+
+    border-radius: 6px;
+    border: 1px solid #AAA;
+}
+
+input[type="radio"] {
+  height: 20px;
+    width: 20px;
+    position: relative;
+    top: 4px;
+    margin: 0 5px 0 0;
+}
+.textbox01 {
+	height: 26px;
+	margin: 4px 0 4px 0;
+	background: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+	padding: 0 3px;
+}
+.textbox02 {
+/*	width: 868px;
+*/
+    width: 100%;
+    height: 250px;
+	margin: 4px;
+	background: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 4px;
+	padding: 0 4px;
+	resize: none;
+}
+input:focus {
+    background: #ffffde;
+	border: 1px solid d1cba8;
+}
+
+/* btn01 */
+.rbtn01 a {
+	display: block;
+	width: 150px;
+	height: 40px; 
+	background: url(btn01.png) top center no-repeat;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 0px 2px 5px #000;
+}
+
+.rbtn01 a:hover {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background: url(btn01a.png) top center no-repeat;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	text-decoration: underline;
+	text-shadow: 0px 2px 5px #5b5b5b;
+}
+
+/* btn02 */
+.rbtn02 a {
+	display: block;
+	width: 150px;
+	height: 40px; 
+	background: url(btn02.png) top center no-repeat;
+	line-height: 40px;
+	text-align: center;
+	color: #5c2209;
+	text-shadow: 0px 2px 5px #fff33b;
+}
+
+.rbtn02 a:hover {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background: url(btn02a.png) top center no-repeat;
+	line-height: 40px;
+	text-align: center;
+	color: #5c2209;
+	text-decoration: underline;
+	text-shadow: 0px 2px 5px #fff998;
+}

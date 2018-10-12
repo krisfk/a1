@@ -1,0 +1,214 @@
+.enrollment-style .page-wrap #navMain td{
+    background-position:center center!important
+}
+@media all and (max-width:1007px){
+    .enrollment-style .page-wrap #form1>table td.ibgt,.page-wrap #form1>table td[width="11"]{
+        background-size:auto 100%!important
+    }
+    .enrollment-style .page-wrap{
+        width:100%
+    }
+    
+    .enrollment-style .form-table .textbox {
+/*    margin: 5px 0 20px 0;
+*/        height: 40px;
+}
+    
+      .enrollment-style .form-table select {
+/*    margin: 5px 0 20px 0;
+*/           margin: 5px 0 0 0;
+
+          height: 40px;
+}
+
+    .enrollment-style #allow_promo,#agreement{
+        width: 20px;
+        height: 20px;
+    }
+    
+   .enrollment-style  .choose-table{
+        width: 95%;
+    }
+    
+  .enrollment-style   .choose-table td{
+        vertical-align: top;
+
+    }
+  .enrollment-style   .agree-statement{
+        font-size: 14px;
+    }
+   .enrollment-style  .page-wrap table[width="896"],.page-wrap>div>table{
+        width:100%!important
+    }
+  .enrollment-style   .page-wrap table[width="100%"] td{
+/*        width:inherit;
+*/        text-align:left;
+/*        display:block;
+*/       /* padding:0 10px!important*/
+    }
+  .enrollment-style   .page-wrap .textbox02{
+        width:100%;
+        box-sizing:border-box
+    }
+
+  .enrollment-style   .page-wrap .confirm{
+/*        width:100%
+*/  
+     /*   min-width: 375px;
+     */   margin: 10px auto 0 auto;
+        width: 100%;
+    }
+    
+  .enrollment-style   .textbox{
+        height: 65px;
+    }
+ .enrollment-style    select{
+        height: 65px;
+    }
+ .enrollment-style    .page-wrap .confirm td{
+        
+        
+/*        display:block;
+*/    
+        
+/*        padding:0 5px!important;
+*//*        width:inherit;
+*/    }
+    
+    
+   .enrollment-style  .page-wrap .it{
+        padding:0!important
+  .enrollment-style   }
+    .page-wrap .it[height="26"]{
+        padding:0 10px!important
+    }
+  .enrollment-style   .page-wrap>div>table>tbody>tr>td>p>img{
+        max-width:100%!important;
+        height:auto!important
+    }
+ .enrollment-style    .page-wrap #navMain{
+        width:100%
+    }
+  .enrollment-style   .page-wrap #form1>table{
+        width:100%!important
+    }
+  .enrollment-style   .page-wrap #form1>table td.ibgt{
+        height:inherit;
+        padding: 10px;
+        font-size: 20px;
+    }
+  .enrollment-style   .page-wrap #form1 .it{
+        padding:10px!important;
+	  line-height: normal;
+    }
+ .enrollment-style    .page-wrap #form1 .it td:empty{
+        display:none
+    }
+  .enrollment-style   .page-wrap #form1 .it p.style1{
+        display:inline
+    }
+    
+ .enrollment-style    .page-wrap #form1 .it p.style1 {
+    display: block;
+    margin: 0 0 20px 0;
+}
+    
+  .enrollment-style   .page-wrap #form1 .it td{
+        display:block;
+        width:inherit!important;
+        vertical-align:middle;
+        margin: 0 0 5px 0;
+    }
+  .enrollment-style   .megclub-promote-statement{
+        font-size: 29px;
+    }
+    
+ .enrollment-style   .megclub-promote-statement span {
+    display: inline-block;
+    color: #fffd9d;
+    font-size: 30px;
+    font-weight: bold;
+/*    background: #744b079c;
+*/    padding:  5px;
+}
+    
+ 
+  .enrollment-style   .page-wrap #form1 .it span[style="color:red"]{
+        display:inline;
+        margin:10px 0 20px 0;
+    }
+    
+ .enrollment-style    .page-wrap #form1    .expand-course-content  span[style="color:red"]{
+        display: inline;
+    }
+    
+    
+  .enrollment-style   .page-wrap #form1 .it>table>tbody>tr>td br{
+        display:none
+    }
+  .enrollment-style   .page-wrap #form1 .it iframe{
+        width:1px;
+        height:1px
+    }
+
+    
+   .enrollment-style      .page-wrap #form1 .it iframe.iframe-map{
+        width:auto;
+        height:auto;
+            margin: 0 0 20px 0;
+    }
+
+  /*  
+    .page-wrap #form1 .it span{
+        font-size:12px!important;
+        
+    }*/
+    
+    
+  .enrollment-style   .page-wrap #form1 .it td input[type=text],.page-wrap #form1 .it td select,
+    #remark
+    {
+        display:block;
+        width:100%!important;
+      /*  margin:inherit!important;*/
+        box-sizing:border-box;
+/*        margin-bottom:5px!important
+*/    
+        margin: 0 0 20px 0;
+    }
+  .enrollment-style   .page-wrap #form1 .it td input[type=radio]{
+/*        margin-bottom:25px!important
+*/            
+    }
+  .enrollment-style   .page-wrap #form1 .it td select[name=year],.page-wrap #form1 .it td select[name=month],.page-wrap #form1 .it td select[name=day]{
+        display:inline-block;
+        width:inherit!important
+    }
+  .enrollment-style   .page-wrap #form1 .it td input[name=captcha]{
+        margin-top:5px!important
+    }
+  .enrollment-style   .page-wrap #form1 .it table{
+        width:100%
+    }
+    
+    
+}
+@media all and (max-width:899px){
+   .enrollment-style  .page-wrap #navMain{
+        width:100%
+    }
+  .enrollment-style   .page-wrap #navMain td[width="32"]{
+        display:none
+    }
+}
+@media all and (max-width:700px){
+   .enrollment-style  .page-wrap #navMain td{
+        background-size:100% auto!important
+    }
+}
+@media all and (max-width:499px){
+   .enrollment-style  .page-wrap #navMain td{
+        display:inline-block;
+        width:50%
+    }
+}

@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+html,body{
+    font-family: "微軟正黑體", "arial";
+    margin: 0;
+    padding: 0;
+}
+
+.map-address-div{
+	display: block;
+	margin: 10px 0 0 0;
+}
+.map-iframe-div{
+	display: none;
+	margin: 10px 0 0 0;
+	
+}
+.reload-captcha-btn{
+        font-family: "微軟正黑體", "arial";
+    font-weight: bold;
+    /* padding: 10px 50px 10px 50px; */
+    background: #7b7b7b;
+    color: #fff;
+    font-size: 15px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* text-shadow: 2px 1px 1px rgba(150, 150, 150, 0.83); */
+    transition: transform 0.1s ease;
+    /* display: block; */
+    margin: 0 auto;
+    padding: 5px;
+    /* display: inherit; */
+    text-decoration: none;
+/*    float: left;
+*/    border: 0px solid #000;
+    margin: 0px 0 10px 0;
+	display: inline-block;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.reload-captcha-btn:hover{
+    background: #929292;
+}
+.captcha-p{
+	padding: 0 0 40px 0;
+}
+
+.captcha-p img{
+    width: 100px;
+    float: left;
+}
+
+
+.enquiry-form-radio-button{
+  width: 20px;
+    height: 20px;
+    background: none;
+    -webkit-box-shadow:none;
+    position: relative;
+    top: 4px;
+    margin: 0 5px 0 10px;
+}
+
+input,select,textarea {
+    border-radius: 6px;
+    outline: 0;
+    padding: 5px 10px;
+    border: 1px solid #c9c9c9;
+    background: #f2f7ff;
+    -moz-box-shadow: inset 0 0 10px #d4e0f4;
+    -webkit-box-shadow: inset 0 0 10px #d4e0f4;
+    box-shadow: inset 0 0 10px #d4e0f4;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+#apply{
+        font-family: "微軟正黑體", "arial";
+
+    
+        font-weight: bold;
+    padding: 10px 50px 10px 50px;
+    background: #012c6a;
+    color: #fff;
+    font-size: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* text-shadow: 2px 1px 1px rgba(150, 150, 150, 0.83); */
+    transition: transform 0.1s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#apply:hover{
+    cursor: pointer;
+    	transform: scale(1.07);	
+}
+
+#apply_form{
+	width: 100%;
+    margin: 80px 0 0 0 ;
+}
+
+.hints{
+	font-size: 12px;
+	color:#3f3f3f;
+	display: inline;
+}
+
+.st{
+	display: inline;
+	color: #A60606;
+}
+
+p.sucess{
+	background:#012c6a;
+	padding:10px;
+	color:#fff;
+	font-size: 20px;
+    
+    
+	font-weight: bold;
+    border-radius: 12px;
+    padding: 30px;
+    
+}
+
+.error{
+	background: #f8ebeeb0;
+	padding: 5px 5px 10px 10px;
+	margin-top: 10px;
+	border: 1px #DDD solid;
+    border-radius:12px;
+}
+
+.error p{
+	color: #000;
+}
+
+.error ul li p{
+	color: #CC0000;
+	font-size: 15px;
+}
+
+table#miyazaki{
+	width: 100%;
+	border-top: 1px #DDD solid;
+	border-left: 1px #DDD solid;
+	border-right: 1px #DDD solid;
+    border-bottom: 0px;
+}
+
+table#miyazaki input[type='radio']{
+	box-shadow: none;
+	    width: 20px;
+    height: 20px;
+	    position: relative;
+    top: 4px;
+}
+
+
+table#miyazaki tbody td { 
+	border-bottom:1px #ddd solid;
+	padding: 10px 10px 10px 10px;
+	background:#ffffffba;
+    
+}	
+
+
+table#miyazaki tbody tr td:first-child { 
+    width: 20%;
+    border-bottom: 1px #ddd solid;
+    vertical-align: top;
+    padding: 10px 0 10px 0;
+    text-indent: 10px;
+    background: #fafafa;
+/*        border-right: 1px solid #ddd;
+*/    /* padding: 5px 10px 10px 10px; */
+    
+}
+
+.form-map{
+    width: 277px;
+    height: 188px;
+}
+
+@media screen and (max-width: 639px) {
+	table#miyazaki{
+		width: 100%;
+  		border: 1px #DDD solid;
+	}
+    
+
+    table#miyazaki tbody td 
+    {
+        padding:  10px 0 10px 0;
+    }
+    form{
+/*                border: 1px solid #ddd; 
+*/
+    }
+	table#miyazaki tbody td {  
+		border:0px #ddd solid;
+	}	
+
+	table#miyazaki caption { background-image: none; }
+	table#miyazaki thead { display: none; }
+	table#miyazaki tbody td { 
+		display: block; 
+		padding:10px 10px 10px 10px;
+		border-bottom: 1px solid #ddd; 
+		border-top: 1px solid #ddd; 
+
+	}
+
+	table#miyazaki tbody tr td:first-child { 
+		background: #FAFAFA; 
+		color: #fff; 
+		display: block;
+        width: 100%;
+        color: #000;
+        border: none;
+	}
+
+	table#miyazaki tbody td:before { 
+		/*content: attr(data-th); 
+		font-weight: bold;
+		text-decoration:underline;
+		display: block;
+		width: 100%;  */
+	}
+
+	.st{
+		display: inline;
+		color: #f00;
+	}
+
+	.error{
+		background: #F9F9F9;
+		padding: 5px 5px 10px 10px;
+		margin-top: 10px;
+	}
+
+	.error p{
+		color: #000;
+        
+	}
+
+	.error ul li p{
+		color: #CC0000;
+		font-size: 0.5em;
+	}
+}

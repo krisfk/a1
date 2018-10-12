@@ -1,0 +1,37 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName hksm.com.hk
+
+order deny,allow
+#deny from all
+#allow from 219.79.226.190
+#allow from 101.78.242.15
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine on
+    RewriteBase /enrollment_test
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^(.*)$ index.php?$1 [L]
+</IfModule>
+
+RewriteEngine On
+RewriteBase /enrollment_test
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|js|css|swf|img|robots\.txt|ckeditor|ckfinder|font-awesome|captcha|attachs)
+RewriteRule ^(.*)$ /index.php/$1 [L]

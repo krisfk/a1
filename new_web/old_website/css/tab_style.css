@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*body{
+	font: 300 14px "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	
+	margin: 50px auto;
+	background: #eee;
+	color: #333;
+	line-height: 1.5;
+}
+a{
+	color: #258fb8;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}*/
+#tabs{
+	position: relative;
+	z-index: 1;
+}
+#tabs li{
+	background: #ddd;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 5px 10px;
+	color: #999;
+	cursor: pointer;
+}
+#tabs li:hover{
+	color: #666;
+}
+#tabs li.enable{
+	border-bottom: 1px solid #ddd;
+	margin-bottom: -1px;
+	color: #333;
+}
+#tab_container{
+	background: #ddd;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 16px #ccc;
+	width: 1000px;
+	position: relative;
+	overflow: hidden;
+}
+#tab_contents{
+	position: absolute;
+	left: 0;
+	width: 5000px; /* 內容寬度 * 頁籤數 */
+}
+#tab_contents > div{
+	padding: 10px 15px;
+	text-align: justify;
+	float: left;
+	width: 970px; /* 內容寬度 - 左右padding */
+}

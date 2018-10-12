@@ -1,0 +1,446 @@
+<?php
+/******************************************************************/
+/* Begin page of the Online-written Test                          */
+/* Created by Kan on 25th Nov, 2003                               */
+/******************************************************************/
+
+   include "modules.php";
+
+   if (!session_is_registered("BeginTime")) {
+      $BeginTime = time();
+      session_register("BeginTime");
+   }
+
+   if (!session_is_registered("Student")) {
+      $Student = array("Bookmark" => array("1" => "N", "2" => "N", "3" => "N", "4" => "N", "5" => "N", "6" => "N", "7" => "N", 
+                                           "8" => "N", "9" => "N", "10" => "N", "11" => "N", "12" => "N", "13" => "N", "14" => "N", 
+                                           "15" => "N", "16" => "N", "17" => "N", "18" => "N", "19" => "N", "20" => "N"),
+                       "Answer" => array("1" => "", "2" => "", "3" => "", "4" => "", "5" => "", "6" => "", "7" => "", 
+                                         "8" => "", "9" => "", "10" => "", "11" => "", "12" => "", "13" => "", "14" => "", 
+                                         "15" => "", "16" => "", "17" => "", "18" => "", "19" => "", "20" => ""));
+      session_register("Student");
+   }
+
+
+   $aryText = array("zh" => array("TimerDescription" => "剩餘時間：",
+                                  "AnswerDescription" => "您選擇的答案是：",
+                                  "PictureQuestion" => "此交通標誌表示：",
+                                  "Bookmark" => "此題已被標示",
+                                  "ReviewBox" => "覆覽欄",
+                                  "PreviousQuestion" => "上一條題目",
+                                  "NextQuestion" => "下一條題目",
+                                  "MarkQuestion" => "覆覽標示",
+                                  "UnMarkQuestion" => "刪除覆覽標示",
+                                  "AnsweredQuestion" => "已經回答的題目",
+                                  "BookmarkedQuestion" => "被標示的題目",
+                                  "UnansweredQuestion" => "尚未回答的題目",
+                                  "SubmitTest" => "交卷/考試總結"),
+                    "en" => array("TimerDescription" => "Time Left:",
+                                  "AnswerDescription" => "Your answer is:",
+                                  "PictureQuestion" => "This traffic sign means:",
+                                  "Bookmark" => "Bookmarked",
+                                  "ReviewBox" => "Review Box",
+                                  "PreviousQuestion" => "Previous",
+                                  "NextQuestion" => "Next",
+                                  "MarkQuestion" => "Mark for Review",
+                                  "UnMarkQuestion" => "Unmark for Review",
+                                  "AnsweredQuestion" => "Question answered",
+                                  "BookmarkedQuestion" => "Question marked for review",
+                                  "UnansweredQuestion" => "Question not answered",
+                                  "SubmitTest" => "Submit / View Test Summary"));
+
+   include "procedures.php";
+
+   $cn = openConn();
+   $rs = openQuery("select min(f_sequence) from grptable where f_gno= ".$GrpNo." and f_sequence = ".$PreviousQuestionSequence, $cn, 2);
+   $Sequence = $rs[0];
+   $rs = openQuery("select q.f_qno, q.f_quest_".$Lang.", q.f_a_".$Lang.", q.f_b_".$Lang.", q.f_c_".$Lang.
+                   ", q.f_pic from parta q inner join grptable g on q.f_qno = g.f_qno where g.f_gno = ".
+                   $GrpNo." and g.f_sequence = ".$Sequence, $cn, 1);
+
+
+   include "header.php";
+?>
+
+
+<script language="JavaScript">
+   var ExamReminder = <?php echo ExamReminder; ?>;
+   var iTimerID = null;
+
+   iTimerID = setInterval("countDown()", 940);
+
+   function countDown() {
+      var indent = "<?php echo $aryText[$Lang]["TimerDescription"]; ?>".length;
+    	if ((document.all.ExamTimer.innerHTML).substr(indent + 0, 2)<"10") {
+    	var iMinute = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 1, 1));	    	
+    	}
+    	else
+    	{
+    	var iMinute = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 0, 2));	    	
+    	}      
+      
+      //var iMinute = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 0, 2));
+<?php
+   if ($Lang == "en") { ?>
+    	if ((document.all.ExamTimer.innerHTML).substr(indent + 7, 2)<"10") {   
+      		var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 8, 1)) - 1;	  	    	
+    	}
+    	else
+    	{
+      		var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 7, 2)) - 1;	    	
+    	}      
+      //var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 7, 2)) - 1;
+<?php
+      } else { ?>
+    	if ((document.all.ExamTimer.innerHTML).substr(indent + 6, 2)<"10") {   
+      		var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 7, 1)) - 1;	    	
+    	}
+    	else
+    	{	    	      
+      		var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 6, 2)) - 1;
+  		}      
+      //var iSecond = parseFloat((document.all.ExamTimer.innerHTML).substr(indent + 6, 2)) - 1;
+<?php
+   } ?>
+
+      if (iSecond < 0) {
+         iMinute--;
+         iSecond = 59;
+      }
+
+<?php
+   if ($Lang == "zh") { ?>
+      document.all.ExamTimer.innerHTML = "<?php echo $aryText[$Lang]["TimerDescription"]; ?>" + 
+                                         (iMinute < 10 ? "0" + iMinute : iMinute) + " 分鐘 " + 
+                                         (iSecond < 10 ? "0" + iSecond : iSecond) + " 秒";
+<?php
+   } else { ?>
+      document.all.ExamTimer.innerHTML = "<?php echo $aryText[$Lang]["TimerDescription"]; ?>" + 
+                                         (iMinute < 10 ? "0" + iMinute : iMinute) + " min " + 
+                                         (iSecond < 10 ? "0" + iSecond : iSecond) + " sec";
+<?php
+   } ?>
+
+      if (iMinute * 60 + iSecond <= ExamReminder) {
+         document.all.ExamTimer.style.textDecoration = document.all.ExamTimer.style.color == "red" ? "none" : "underline";
+         document.all.ExamTimer.style.color = document.all.ExamTimer.style.color == "red" ? "black" : "red";
+      }
+
+      if (iMinute <= 0 && iSecond <= 0) {
+         clearInterval(iTimerID);
+         document.frmTest.action = "result.php?<?php echo $_SERVER["QUERY_STRING"]; ?>";
+         document.frmTest.submit();
+      }
+   }
+
+   function selectAnswer(obj) {
+      //document.all.Answer.innerHTML = obj.value;
+      document.all.Answer.innerHTML = obj.id;
+      document.frmTest.txtAnswer.value = obj.id;
+      if (document.frmTest.txtBookmark.value == "Y" && document.frmTest.txtAnswer.value != "")
+         document.all["Q" + document.frmTest.txtQuestionID.value].background = "<?php echo "images/test/legend_marked_answered.gif"; ?>";
+      else
+         if (document.frmTest.txtAnswer.value != "")
+            document.all["Q" + document.frmTest.txtQuestionID.value].background = "<?php echo "images/test/legend_answered.gif"; ?>";
+      document.all["AnswerLabel"].style.color = "red";
+   }
+
+   function jumpQuestion(iDir) {
+      //disableAll(true);
+      document.frmTest.qseq.value = parseFloat(document.frmTest.qseq.value) + iDir;
+      document.frmTest.submit();
+   }
+
+   function bookmark(obj) {
+      document.frmTest.txtBookmark.value = document.frmTest.txtBookmark.value == "Y" ? "N" : "Y";
+      //document.frmTest.btnBookmark.value = document.frmTest.txtBookmark.value == "Y" ? "<?php echo $aryText[$Lang]["UnMarkQuestion"]; ?>" : "<?php echo $aryText[$Lang]["MarkQuestion"]; ?>";
+      obj.innerHTML = document.frmTest.txtBookmark.value == "Y" ? "<?php echo $aryText[$Lang]["UnMarkQuestion"]; ?>" : "<?php echo $aryText[$Lang]["MarkQuestion"]; ?>";
+      if (document.frmTest.txtAnswer.value != "")
+         document.all["Q" + document.frmTest.txtQuestionID.value].background = document.frmTest.txtBookmark.value == "Y" ? "<?php echo "images/test/legend_marked_answered.gif"; ?>" : "<?php echo "images/test/legend_answered.gif"; ?>";
+      else
+         document.all["Q" + document.frmTest.txtQuestionID.value].background = document.frmTest.txtBookmark.value == "Y" ? "<?php echo "images/test/legend_marked.gif"; ?>" : "<?php echo "images/test/legend_unanswered.gif"; ?>";
+   }
+
+   function finishExam() {
+      document.frmTest.action = "summary.php?lang=<?php echo $Lang; ?>&cs=<?php echo $CheckSum; ?>&grpno=<?php echo $GrpNo; ?>";
+      document.frmTest.submit();
+   }
+   
+   function jump2Question(QuestionID) {
+      document.frmTest.qseq.value = QuestionID;
+      document.frmTest.submit();
+   }
+   
+   function disableAll(Mode) {
+      document.frmTest.btnAnswer1.disabled = Mode;
+      document.frmTest.btnAnswer2.disabled = Mode;
+      document.frmTest.btnAnswer3.disabled = Mode;
+      document.frmTest.btnPrevious.disabled = Mode;
+      document.frmTest.btnNext.disabled = Mode;
+      document.frmTest.btnBookmark.disabled = Mode;
+      document.frmTest.btnFinish.disabled = Mode;
+   }
+
+   var Answer = "";
+
+   function mOver(obj) {
+      if ((obj.style.backgroundColor).toUpperCase() != cGreen)
+         obj.style.backgroundColor = cGrey;
+      document.body.style.cursor = "hand";
+   }
+
+   function mOut(obj) {
+      if ((obj.style.backgroundColor).toUpperCase() != cGreen)
+         obj.style.backgroundColor = cWhite;
+      document.body.style.cursor = "default";
+   }
+</script>
+
+
+<form name="frmTest" method="post">
+<table border=0 cellpadding=0 cellspacing=3 width="100%" height="100%">
+  <tr>
+    <td height="8%">
+      <!-- Header Area -->
+      <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%">
+        <tr>
+          <td width="70%" style="text-align:left;">
+            <?php if ($Lang == "zh")
+                     echo "第 ".$GrpNo."組&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第 ".$Sequence." 條";
+                  else
+                     echo "Group ".$GrpNo."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Question ".$Sequence;
+            ?>
+          </td>
+          <td id="ExamTimer" style="font-weight:bold;font-family:Verdena;"><?php echo $aryText[$Lang]["TimerDescription"].$TimeLeft; ?></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="72%">
+      <!-- Question Area -->
+      <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%">
+        <tr>
+          <td width="75%" height="85%" colspan=2>
+            <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%" style="border:3px solid black;background-color:#FFFAD0;">
+              <tr>
+                <td style="text-align:left;vertical-align:top;">
+                  <input type="hidden" name="qseq" value="<?php echo $Sequence; ?>">
+                  <input type="hidden" name="txtQuestionID" value="<?php echo $Sequence; ?>">
+            <?php 
+               if (!haveData($rs["f_quest_".$Lang])) {
+                  echo $aryText[$Lang]["PictureQuestion"];
+               } else
+                  echo $rs["f_quest_".$Lang]; ?>
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="70%" valign="top">
+                  <table border=0 cellpadding=3 cellspacing=0 width="100%">
+<?php
+   if (!haveData($rs["f_quest_".$Lang])) {
+      $HaveImage = true;
+      $QLen = 70;
+   } else {
+      $HaveImage = false;
+      $QLen = 90;
+   }
+
+   echo "<tr><td align=\"right\" width=\"10%\">A.</td><td align=\"left\" width=\"".$QLen."%\">".$rs["f_a_".$Lang]."</td>";
+   if ($HaveImage)
+      echo "<td align=\"center\" width=\"20%\" rowspan=3><img src=\"images/".$rs["f_pic"]."\" border=0></td>";
+   echo "</tr>";
+   echo "<tr><td align=\"right\" width=\"10%\">B.</td><td align=\"left\" width=\"".$QLen."%\">".$rs["f_b_".$Lang]."</td></tr>";
+   echo "<tr><td align=\"right\" width=\"10%\">C.</td><td align=\"left\" width=\"".$QLen."%\">".$rs["f_c_".$Lang]."</td></tr>";
+?>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="100%">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+
+          <!-- Review Box -->
+          <td rowspan=3 width="20%">
+            <table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+              <tr>
+                <td>
+                  <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%" style="border:1px solid black;">
+                    <tr>
+                      <td colspan=4 style="text-decoration:underline;"><?php echo $aryText[$Lang]["ReviewBox"]; ?></td>
+                    </tr>
+<?php
+   for ($i = 1; $i < 21; $i++) {
+      if ($i % 4 == 1) echo "<tr>";
+      echo "<td align=\"center\">".genReviewButton($i)."</td>";
+      if ($i % 4 == 0) echo "</tr>";
+   }
+?>
+                    <tr>
+                      <td height="100%" colspan=4>&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Answer Area -->
+        <tr>
+          <td style="text-align:left;<?php if ($Student["Answer"][$Sequence] != "") echo "color:red;" ?>" width="20%" id="AnswerLabel">
+            <?php echo $aryText[$Lang]["AnswerDescription"]; ?>
+            <input type="hidden" name="txtAnswer" value="<?php echo $Student["Answer"][$Sequence]; ?>">
+            <input type="hidden" name="txtBookmark" value="<?php echo $Student["Bookmark"][$Sequence]; ?>">
+          </td>
+          <td id="Answer" style="color:red;text-align:left;font-weight:bold;" width="30%"><?php echo $Student["Answer"][$Sequence]; ?></td>
+        </tr>
+
+        <!-- Answer Chooses -->
+        <tr>
+          <td height="12%" colspan=2>
+            <table border=0 cellpadding=3 cellspacing=0 width="100%" height="100%">
+              <tr>
+            <!--<input type="button" name="btnAnswer1" value="A" onClick="selectAnswer(this);" class="Button3" style="padding-left:30px;padding-right:30px;">
+            <input type="button" name="btnAnswer2" value="B" onClick="selectAnswer(this);" class="Button3" style="padding-left:30px;padding-right:30px;">
+            <input type="button" name="btnAnswer3" value="C" onClick="selectAnswer(this);" class="Button3" style="padding-left:30px;padding-right:30px;">-->
+                <td><?php echo genAnswerButton("A", 60, 120, $Student["Answer"][$Sequence]); ?></td>
+                <td width="10">&nbsp;</td>
+                <td><?php echo genAnswerButton("B", 60, 120, $Student["Answer"][$Sequence]); ?></td>
+                <td width="10">&nbsp;</td>
+                <td><?php echo genAnswerButton("C", 60, 120, $Student["Answer"][$Sequence]); ?></td>
+                <td width="100%">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="20%">
+      <!-- Navigation -->
+      <table border=0 cellpadding=3 cellspacing=0 width="100%">
+        <tr>
+          <td>
+            <table border=0 cellpadding=10 cellspacing=0 width="100%" style="border:1px solid black;">
+              <tr>
+                <td align="center">
+<?php
+   if ($Sequence <= 1)
+      $Disabled = true;
+   else
+      $Disabled = false;
+   echo "                ".genControlButton($aryText[$Lang]["PreviousQuestion"], "jumpQuestion(-1);", 60, 150, $Disabled);
+?>
+                </td>
+                <td align="center">
+<?php
+   if ($Sequence >= 20)
+      $Disabled = true;
+   else
+      $Disabled = false;
+   echo "                ".genControlButton($aryText[$Lang]["NextQuestion"], "jumpQuestion(1);", 60, 150, $Disabled);
+?>
+                </td>
+<?php
+   /*echo "                <input type=\"button\" name=\"btnPrevious\" value=\"".$aryText[$Lang]["PreviousQuestion"].
+           "\" onClick=\"jumpQuestion(this, -1);\" class=\"Button4\"";
+   if ($Sequence <= 1)
+      echo " disabled";
+   echo ">\n                <input type=\"button\" name=\"btnNext\" value=\"".$aryText[$Lang]["NextQuestion"].
+        "\" onClick=\"jumpQuestion(this, 1);\" class=\"Button4\"";
+   if ($Sequence >= 20)
+      echo " disabled";
+   echo ">\n";*/
+?>
+                <td align="center">
+<?php
+   if ($Student["Bookmark"][$Sequence] == "Y")
+      $ButtonValue = $aryText[$Lang]["UnMarkQuestion"];
+   else
+      $ButtonValue = $aryText[$Lang]["MarkQuestion"];
+   echo "                ".genControlButton($ButtonValue, "bookmark(this);", 60, 150, false);
+?>
+<!--
+                  <input type="button" name="btnBookmark" value="<?php if ($Student["Bookmark"][$Sequence] == "Y")
+                                                                    echo $aryText[$Lang]["UnMarkQuestion"];
+                                                                 else
+                                                                    echo $aryText[$Lang]["MarkQuestion"]; ?>" onClick="bookmark();" class="Button4">
+-->
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td rowspan=2 width="40%">
+            <table border=0 cellpadding=0 cellspacing=0 width="100%">
+              <tr><td><img src="images/test/legend_answered.gif">&nbsp;-&nbsp;<?php echo $aryText[$Lang]["AnsweredQuestion"]; ?></td></tr>
+              <tr><td><img src="images/test/legend_marked.gif">&nbsp;-&nbsp;<?php echo $aryText[$Lang]["BookmarkedQuestion"]; ?></td></tr>
+              <tr><td><img src="images/test/legend_unanswered.gif">&nbsp;-&nbsp;<?php echo $aryText[$Lang]["UnansweredQuestion"]; ?></td></tr>
+            </table>
+          </td>
+          <td align="right">
+<?php
+   echo "                ".genControlButton($aryText[$Lang]["SubmitTest"], "finishExam();", 60, 150, false);
+?>
+<!--
+            <input type="button" name="btnFinish" value="<?php echo $aryText[$Lang]["SubmitTest"]; ?>" onClick="finishExam();" class="Button4">
+-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>
+
+<?php
+   closeConn($cn);
+   include "footer.php";
+   function genReviewButton($QuestionSequence) {
+      if ($_SESSION["Student"]["Bookmark"][$QuestionSequence] == "Y" && haveData($_SESSION["Student"]["Answer"][$QuestionSequence]))
+         return("<table border=0 cellpadding=0 cellspacing=0 width=\"32\" height=\"32\"><tr><td id=\"Q".$QuestionSequence.
+                "\" background=\"images/test/legend_marked_answered.gif\" style=\"vertical-align:middle;text-align".
+                ":center;\"><a href=\"JavaScript:jump2Question(".$QuestionSequence.");\">".$QuestionSequence."</a></td>".
+                "</tr></table>");
+      else
+         if (haveData($_SESSION["Student"]["Answer"][$QuestionSequence]))
+            return("<table border=0 cellpadding=0 cellspacing=0 width=\"32\" height=\"32\"><tr><td id=\"Q".
+                   $QuestionSequence."\" background=\"images/test/legend_answered.gif\" style=\"vertical-align:middle;".
+                   "text-align:center;\"><a href=\"JavaScript:jump2Question(".$QuestionSequence.");\">".
+                   $QuestionSequence."</a></td></tr></table>");
+         else
+            if ($_SESSION["Student"]["Bookmark"][$QuestionSequence] == "Y")
+               return("<table border=0 cellpadding=0 cellspacing=0 width=\"32\" height=\"32\"><tr><td id=\"Q".
+                      $QuestionSequence."\" background=\"images/test/legend_marked.gif\" style=\"vertical-align:middle;".
+                      "text-align:center;\"><a href=\"JavaScript:jump2Question(".$QuestionSequence.");\">".
+                      $QuestionSequence."</a></td></tr></table>");
+            else
+               return("<table border=0 cellpadding=0 cellspacing=0 width=\"32\" height=\"32\"><tr><td id=\"Q".
+                      $QuestionSequence."\" background=\"images/test/legend_unanswered.gif\" style=\"vertical-align:".
+                      "middle;text-align:center;\"><a href=\"JavaScript:jump2Question(".$QuestionSequence.");\">".
+                      $QuestionSequence."</a></td></tr></table>");
+   }
+
+   function genAnswerButton($ButtonLabel, $Height, $Width, $StudentAnswer) {
+      $html = "<table border=0 cellpadding=3 cellspacing=0 width=\"".$Width."\" height=\"".$Height."\" style=".
+              "\"background-color:";
+      if ($StudentAnswer == $ButtonLabel)
+         $html .= "#A3F994";
+      else
+         $html .= "white";
+      $html .= ";border:1px solid black;font-weight:bold;text-align:center;vertical-align:middle;\"><tr><td id=\"".
+               $ButtonLabel."\" onMouseOver=\"mOver(this);\" onMouseOut=\"mOut(this);\" onClick=\"clickThis(this);\"".
+               "style=\"font-size:20px;font-weight:bold;font-family:Arial;\">".$ButtonLabel."</td></tr></table>";
+      return($html);
+   }
+?>

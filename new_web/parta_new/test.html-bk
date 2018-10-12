@@ -1,0 +1,9 @@
+<STYLE>
+.block {height: 50; width: 150}
+</STYLE>
+
+中 文 版 <br>
+<SPAN CLASS="block" STYLE="cursor: hand"><img src="/images/online_zh.gif" width="120" height="30" border="0" onclick="window.open('http://www.hksm.com.hk/onlinetest2/index_zh.html', 'winOnlineWrittenTest', 'fullscreen=1');"></SPAN>
+<br><br>
+英 文 版 <br>
+<SPAN CLASS="block" STYLE="cursor: hand"><img src="/images/online_en.gif" width="120" height="30" border="0" onclick="window.open('http://www.hksm.com.hk/onlinetest2/index_en.html', 'winOnlineWrittenTest', 'fullscreen=1');"></SPAN>

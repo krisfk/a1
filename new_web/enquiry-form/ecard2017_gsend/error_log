@@ -1,0 +1,5 @@
+[07-Feb-2018 03:21:45 America/Chicago] PHP Fatal error:  Call to undefined method SMTP::getError() in /home/a1driving/public_html/enquiry-form/ecard2017_gsend/PHPMailer_5.2.2/class.phpmailer.php on line 2363
+[07-Feb-2018 03:24:19 America/Chicago] PHP Fatal error:  Call to undefined method SMTP::getError() in /home/a1driving/public_html/enquiry-form/ecard2017_gsend/PHPMailer_5.2.2/class.phpmailer.php on line 2363
+[07-Feb-2018 03:26:05 America/Chicago] PHP Fatal error:  Call to undefined method SMTP::getError() in /home/a1driving/public_html/enquiry-form/ecard2017_gsend/PHPMailer_5.2.2/class.phpmailer.php on line 2363
+[07-Feb-2018 03:36:00 America/Chicago] PHP Fatal error:  Call to undefined method SMTP::getError() in /home/a1driving/public_html/enquiry-form/ecard2017_gsend/PHPMailer_5.2.2/class.phpmailer.php on line 2363
+[07-Feb-2018 03:36:16 America/Chicago] PHP Fatal error:  Call to undefined method SMTP::getError() in /home/a1driving/public_html/enquiry-form/ecard2017_gsend/PHPMailer_5.2.2/class.phpmailer.php on line 2363
