@@ -14,18 +14,21 @@ $(function () {
 		e.preventDefault();
 
 		if ($(this).hasClass('left')) {
+			$('.news.section ul').prepend($('.news-ul-div li').eq(news_num - 1));
+			$('.news-ul-div li').fadeIn(200);
+			$('.news-ul-div li').eq(news_num - exceed).fadeOut(0);
+
+
+
+		}
+
+		if ($(this).hasClass('right')) {
 
 			$('.news.section ul').append($('.news-ul-div li').eq(0));
 			$('.news-ul-div li').fadeIn(200);
 			$('.news-ul-div li').eq(news_num - exceed).fadeOut(0);
 
 
-		}
-
-		if ($(this).hasClass('right')) {
-			$('.news.section ul').prepend($('.news-ul-div li').eq(news_num - 1));
-			$('.news-ul-div li').fadeIn(200);
-			$('.news-ul-div li').eq(news_num - exceed).fadeOut(0);
 		}
 
 
