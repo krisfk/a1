@@ -48,7 +48,7 @@
 				<div class="outer">
 				<ul>
 					<li>
-						<a class="prev-a" href="<?php echo $base;?>news/news-detail-app.php"><img src="<?php echo $base;?>images/page-arrow-left.png">上一則</a>
+						<a class="prev-a" href="<?php echo $base;?>news/news-detail-lesson.php"><img src="<?php echo $base;?>images/page-arrow-left.png">上一則</a>
 						
 					</li>
 					

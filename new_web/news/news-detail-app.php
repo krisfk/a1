@@ -59,7 +59,7 @@
 					</li>
 					
 					<li>
-						<a class="next-a" href="<?php echo $base;?>news/news-detail-tvc.php">下一則<img src="<?php echo $base;?>images/page-arrow-right.png"></a>
+						<a class="next-a" href="<?php echo $base;?>news/news-detail-lesson.php">下一則<img src="<?php echo $base;?>images/page-arrow-right.png"></a>
 
 						
 					</li>

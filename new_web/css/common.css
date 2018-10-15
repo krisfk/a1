@@ -90,6 +90,42 @@ html, body {
     font-family: "微軟正黑體", "arial";
     background: url(../images/bg.png) 0px -260px;
 }
+.news-blk-div {
+    position: relative;
+}
+.news-blk-div-a {
+    position: absolute;
+}
+
+
+.news-blk-div-a:hover {
+	opacity: 0.8;
+}
+
+
+.news-blk-div-a.left {
+    display: block;
+    height: 100%;
+    width: 3%;
+    top: 0;
+    left: -4%;
+    background: url(../images/arrow-left.png) center space no-repeat;
+    background-size: auto 12%;
+}
+.news-ul-div-outer{
+overflow: hidden;
+}
+.news-ul-div{
+/*	width: 3000px;
+	overflow: hidden;*/
+}
+.news-blk-div-a.right {display: block;
+    height: 100%;
+    width: 3%;
+    top: 0;
+    right: -4%;
+    background: url(../images/arrow-right.png) center space no-repeat;
+    background-size: auto 12%;}
 .warning-bar {
     text-align: center;
     background: #012c6a;
@@ -98,9 +134,8 @@ html, body {
     padding: 10px;
     font-size: 25px;
 }
-
-.mobile.warning-bar{
-	display: none;
+.mobile.warning-bar {
+    display: none;
 }
 .discount-sentence {
     color: #e60012;
@@ -1221,7 +1256,7 @@ a {
 }
 .news.section ul li {
     display: inline-block;
-    margin: 0 14px 0 0;
+    margin: 0 7px 0 7px;
     vertical-align: top;
 }
 .news.section ul li.last {
@@ -1233,10 +1268,10 @@ a {
     width: 100%;
 }
 .news.section ul li a img {
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease;
 }
 .news.section ul li a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 .news.section .post-date {
     font-size: 18px;
@@ -2396,11 +2431,10 @@ body.course .text-cnt-ul.text-cnt-ul-1 {
     position: fixed;
     width: 100%;
     bottom: 0;
-	z-index: 9000000;
+    z-index: 9000000;
 }
-	
-.mobile.warning-bar{
-	display: block;
+.mobile.warning-bar {
+    display: block;
 }
 .discount-sentence br {
     display: block;

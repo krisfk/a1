@@ -40,6 +40,14 @@ date_default_timezone_set( 'Asia/Hong_Kong' );
 
 			<span class="eng lang">NEWS</span> <span class="chi lang">最新消息</span> </div>
 
+		
+	<div class="news-blk-div">
+		
+		<a href="javascript:void(0);" class="news-blk-div-a left"></a>
+		<a href="javascript:void(0);" class="news-blk-div-a right"></a>
+		
+		<div class="news-ul-div-outer">
+		<div class="news-ul-div">
 		<ul>
 
 			<li><a href="<?php echo $base;?>news/news-detail-app.php"><img src="<?php echo $base;?>images/app-banner.jpg">
@@ -48,20 +56,43 @@ date_default_timezone_set( 'Asia/Hong_Kong' );
        </a>
 			</li>
 
+			
+			
+			<li><a href="<?php echo $base;?>news/news-detail-lesson.php"><img src="<?php echo $base;?>images/news-banner-5.jpg">
+          <div class="post-date">2018-10-10</div>
+          <div class="post-title">A1學車教室</div>
+          </a>
+			</li>
+
+			
+			
+			
+			
 			<li><a href="<?php echo $base;?>news/news-detail-tvc.php"><img src="<?php echo $base;?>images/news-banner-4.jpg">
           <div class="post-date">2018-07-03</div>
           <div class="post-title">A1駕駛學校 - 「師資保證．信心之選」</div>
           </a>
 			</li>
 
+			
+			
 			<li><a href="<?php echo $base;?>news/news-detail.php"><img src="<?php echo $base;?>images/news-banner-1.jpg">
           <div class="post-date">2016-09-12</div>
           <div class="post-title">A1駕駛學校劇場：親愛的</div>
           </a>
 			</li>
+		
+			
+			
+			
+			
 		</ul>
+			</div>
+			</div>
+	</div>
 
-
+		
+		
 	</div>
 
 
